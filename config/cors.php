@@ -31,4 +31,8 @@ return [
 
     'supports_credentials' => true,
 
+    'supports_credentials' => true,
+    'paths' => ['api/*', 'broadcasting/auth', 'pusher/*', 'sanctum/csrf-cookie'],
+    'allowed_origins' => ['https://newlaravelproject-production.up.railway.app'],
+
 ];
