@@ -49,7 +49,7 @@
             const email = document.querySelector('input[name="email"]').value;
 
             return $.ajax({
-                url: '{{ secure_url(route('check.existing.data')) }}',
+                url: '{{ route('check.existing.data') }}',
                 method: 'POST',
                 data: {
                     _token: '{{ csrf_token() }}',
