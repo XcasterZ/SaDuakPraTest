@@ -39,7 +39,7 @@
                         alert('An error occurred. Please try again.');
                     }
                 });
-            });
+            }); 
 
             // Forgot Password form submit handler
             $('#forgot-password-form').on('submit', function(event) {

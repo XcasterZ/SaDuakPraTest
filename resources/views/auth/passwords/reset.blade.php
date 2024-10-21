@@ -31,7 +31,7 @@
             background-color: #444;
             color: white;
             border-color: #007bff;
-        }
+        } 
 
         .error-message {
             color: #ff4d4d; /* สีแดงสำหรับข้อความผิดพลาด */

@@ -74,7 +74,7 @@
                         message = 'Email already exists.';
                     }
 
-                    if (message) {
+                    if (message) { 
                         alert(message);
                     } else {
                         // ส่งข้อมูลการลงทะเบียน

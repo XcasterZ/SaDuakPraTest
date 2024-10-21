@@ -102,8 +102,8 @@ Route::get('/test-db', function () {
 // --------------------- Social Authentication ---------------------
 Route::get('/auth/google', [GoogleController::class, 'redirect'])->name('auth.google.redirect');
 Route::get('/auth/google/callback', [GoogleController::class, 'callback'])->name('auth.google.callback');
-Route::get('auth/facebook', [FacebookController::class, 'redirect'])->name('auth.facebook.redirect');
-Route::get('auth/facebook/callback', [FacebookController::class, 'callback'])->name('auth.facebook.callback');
+Route::get('/auth/facebook', [FacebookController::class, 'redirect'])->name('auth.facebook.redirect');
+Route::get('/auth/facebook/callback', [FacebookController::class, 'callback'])->name('auth.facebook.callback');
 
 // --------------------- Password Reset Routes ---------------------
 Route::post('/password/email', function (Request $request) {
@@ -113,7 +113,7 @@ Route::post('/password/email', function (Request $request) {
     return $status === Password::RESET_LINK_SENT
         ? response()->json(['success' => true])
         : response()->json(['success' => false], 400);
-})->name('auth.password.email');
+})->name('auth.password.email'); 
 
 Route::get('password/reset/{token}', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
